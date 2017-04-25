@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="person" class="linhtran.Person" name="person">
+            <property name="name" value="Tran van Linh"/>
+            <property name="email" value="linhtran1808@gmail.com"/>
+        </bean>
+        <bean id="person2" class="linhtran.Person" name="person2">
+            <property name="name" value="Le Tat tung"/>
+            <property name="email" value="linhtran@gmail.com"/>
+        </bean>
+
+        <bean id="person3" class="linhtran.Person" name="person3">
+            <property name="name" value="Ma Van Tai"/>
+            <property name="email" value="linhtran1808@gmail.com"/>
+        </bean>
+
+        <bean id="person4" class="linhtran.Person" name="person4">
+            <property name="name" value="${pName}"/>
+            <property name="email" value="${pMail}"/>
+        </bean>
+        <bean class="linhtran.BeanFactoryPostProcessor.TestBeanPostProcessor"/>
+        <bean class="linhtran.BeanFactoryPostProcessor.TestBeanPostProcessor2"/>
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations" value="bean-factory-prrperties.properties"/>
+        </bean>
+</beans>

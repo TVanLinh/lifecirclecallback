@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+    default-init-method="myInit" default-destroy-method="myDestroy"
+>
+
+
+    <bean id="person" class="linhtran.Person" init-method="myInit" destroy-method="myDestroy">
+        <property name="email" value="lintran180895@gmail.com"/>
+        <property name="name" value="Bui thi Thao"/>
+    </bean>
+    <bean id="user" class="linhtran.User" >
+        <property name="passWord" value="12445"/>
+        <property name="userName" value="Tran Van Linh"/>
+    </bean>
+
+    <bean class="linhtran.BeanPostProcessor.InstantiationTracingBeanPostProcessor"/>
+</beans>
